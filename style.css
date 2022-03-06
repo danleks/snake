@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #2b331a;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9bba5a;
+  font-family: "Press Start 2P", cursive;
+}
+
+.board {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 588px;
+  height: 420px;
+  border: 3px solid black;
+}
+
+.board div {
+  width: 28px;
+  height: 28px;
+}
+
+.board .welcome {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.snake {
+  background-color: #2b331a;
+  border-radius: 8px;
+}
+
+.apple {
+  background-color: #2b331a;
+  border-radius: 50%;
+  animation: pulsing 2s ease;
+}
+
+h1 {
+  font-size: 90px;
+}
+
+button.start,
+button.gameOver {
+  font-size: 30px;
+  padding: 20px;
+  border: none;
+  background: no-repeat;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: "Press Start 2P", cursive;
+}
+
+button.start:hover {
+  color: #9bba5a;
+  background-color: #2b331a;
+}
+.board .hide {
+  display: none;
+}
+
+.transparent {
+  opacity: 0.3;
+}
+
+.gameOver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 88px;
+  text-align: center;
+}
+
+@keyframes pulsing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
